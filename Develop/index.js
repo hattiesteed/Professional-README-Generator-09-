@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require (`inquirer`);
 const fs = require (`fs`);
+const generateMarkdown = require (`./utils/generateMarkdown`);
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -11,39 +12,45 @@ const questions = [
     {
         type: `input`,
         message: `Please provide a description of your project`,
-        name: `Description`,
+        name: `description`,
     },
     {
         type: `input`,
         message: `Provide installation instructions`,
-        name: `Installation`,
+        name: `installation`,
     },
     {
         type: `input`,
         message: `Provide usage instructions for your project`,
-        name: `Usage`,
+        name: `usage`,
     },
     {
         type: `input`,
         message: `Provide testing instructions`,
-        name: `Test`,
+        name: `tests`,
     },
     {
         type: `input`,
         message: `Provide contribution guidelines for your project`,
-        name: `Contributions`,
+        name: `contributions`,
     },
     {
         type: `list`,
         message: `Select license`,
-        name: `License`,
+        name: `license`,
         choices: [`MIT`, `Apache`, `GPL`, `none`],
     },
 
     {
         type: `input`,
+        message: `Provide questions`,
+        name: `questions`,
+    },
+
+    {
+        type: `input`,
         message: `Provide GitHub username`,
-        name: `Username`,
+        name: `username`,
     },
     {
         type: `input`,
@@ -54,11 +61,21 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
-}
+    fs.writeFile(fileName, generateMarkdown(data), 
+    function (err) {
+        if (err) {
+            return console.log(err); }
+        console.log(`Your README file has been generated!`);
+    })
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then(function (data) {
+        writeToFile(`README.md`, data);
+    })
+};
 
 // Function call to initialize app
 init();
