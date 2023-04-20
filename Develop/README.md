@@ -23,7 +23,6 @@
   
   # App Working Example
   https://drive.google.com/file/d/1JjpdCx08N3j28oqIzEATBYErSQR2JSKL/view
-  ![Screenshot README](https://user-images.githubusercontent.com/124942272/233261052-38f14e41-f1b8-4093-ade2-7fc1c4b3bce3.png)
 
   # README Example
   ![Screenshot README](https://user-images.githubusercontent.com/124942272/233261052-38f14e41-f1b8-4093-ade2-7fc1c4b3bce3.png)
