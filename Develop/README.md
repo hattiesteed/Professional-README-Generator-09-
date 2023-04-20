@@ -30,4 +30,3 @@
   ## Questions
   * GitHub Username: hattiesteed
   * Email: harriett.steed@gmail.com
-  
