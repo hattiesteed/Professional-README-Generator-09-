@@ -41,11 +41,11 @@ const questions = [
         choices: [`MIT`, `Apache`, `GPL`, `none`],
     },
 
-    {
-        type: `input`,
-        message: `Provide questions`,
-        name: `questions`,
-    },
+    // {
+    //     type: `input`,
+    //     message: `Provide questions`,
+    //     name: `questions`,
+    // },
 
     {
         type: `input`,
