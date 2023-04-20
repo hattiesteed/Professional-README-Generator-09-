@@ -5,12 +5,12 @@
   It is important to have a README with information about the website you have created. This can be used to save time with your project  by using this instead of creating your own.
 
   ## Table of Contents
-  *[Installation](#installation)
-  *[Usage](#usage)
-  *[Contributing](#contributing)
-  *[Tests](#tests)
-  *[Questions](#questions)
-  *[License](#license)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  * [License](#license)
 
   ## Installation
   Node and inquire package must be installed to work correctly.
